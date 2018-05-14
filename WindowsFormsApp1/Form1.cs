@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
                 float a, b;
                 int count;
+        double x,z;
                 bool znak = true;
         public Form1()
         {
@@ -114,14 +115,14 @@ namespace WindowsFormsApp1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            b = Convert.ToInt32(b, 2);
-            textBox1.Text = Convert.ToString(b, 10);
+            //b = Convert.ToInt32(b, 2);
+            //textBox1.Text = Convert.ToString(b, 10);
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            b = int.Parse(b);
-            textBox1.Text = Convert.ToString(a, 2);
+          //  b = int.Parse(b);
+            //textBox1.Text = Convert.ToString(a, 2);
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -148,27 +149,41 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
-            double x = Convert.ToDouble(textBox1);
-            double doublez = Math.Pow(Math.Sin(x), 4);
-          //int qq =  Convert.ToInt32(doublez);
-            //textBox1 = qq;
-            String sin = Convert.ToString(doublez);
-            //Math.Sin(textBox1.Text,2);
+            double gradus = Convert.ToDouble(textBox1.Text);
+            double radian = gradus * Math.PI / 180;
+            z = 0;
+         
+            z=Math.Sin(radian);
+            textBox1.Text = Convert.ToString(z);
+            
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            double gradus = Convert.ToDouble(textBox1.Text);
+            double radian = gradus * Math.PI / 180;
+            z = 0;
+            z = Math.Cos(radian);
+            textBox1.Text = Convert.ToString(z);
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-
+            double gradus = Convert.ToDouble(textBox1.Text);
+            double radian = gradus * Math.PI / 180;
+            z = 0;
+            z = Math.Tan(radian);
+            textBox1.Text = Convert.ToString(z);
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-
+            double gradus = Convert.ToDouble(textBox1.Text);
+            double radian = gradus * Math.PI / 180;
+            z = 0;
+            z = Math.Tan(radian);
+            z = 1 / z;
+            textBox1.Text = Convert.ToString(z);
         }
 
         private void calculate()
